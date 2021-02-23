@@ -77,13 +77,13 @@ module.exports = [
     feed: {
       canonical_base: 'http://80shuo.com',
     },
-    comment: {
-      service: 'vssue',
-      owner: '80maker',
-      repo: '80maker.github.io',
-      clientId: 'Iv1.57b5c522319529f6',
-      clientSecret: '7ad0e3d1455a2d6425c813b37a0526e9bd820657',
-    }
+    // comment: {
+    //   service: 'vssue',
+    //   owner: '80maker',
+    //   repo: '80maker.github.io',
+    //   clientId: 'Iv1.57b5c522319529f6',
+    //   clientSecret: '7ad0e3d1455a2d6425c813b37a0526e9bd820657',
+    // }
   }],
   require('../../../plugin/theme-utils'),
   require('../../../plugin/float-menu')

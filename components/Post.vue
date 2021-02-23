@@ -39,11 +39,6 @@
               <p class="article-copyright__text">{{$page.lastUpdated}}</p>
             </li>
             <li class="article-copyright__item">
-              <strong class="article-copyright__title">Copyright<span>:</span></strong>
-              <p class="article-copyright__text">自由转载-非商用-禁止演绎-保持署名（<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">CC
-                  BY-NC-ND 4.0</a>）</p>
-            </li>
-            <li class="article-copyright__item">
               <strong class="article-copyright__title">Link<span>:</span></strong>
               <p class="article-copyright__text"><a :href="pageLink"
                   :title="$page.title">{{pageLink}}</a></p>
@@ -86,7 +81,7 @@ export default {
     headerStyle() {
       if (!this.$frontmatter.cover) return;
       return {
-        'background-image': `url(${this.$frontmatter.cover})`, 
+        'background-image': `url(${this.$frontmatter.cover})`,
         'background-color': this.$frontmatter.coverBgColor
       }
     },
@@ -99,7 +94,7 @@ export default {
 
 <style lang="stylus">
 .post
-  background var(--theme-card-background) 
+  background var(--theme-card-background)
   border-radius: 6px;
   line-height 1.8
   color var(--theme-foreground-color)

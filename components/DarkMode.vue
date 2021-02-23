@@ -9,7 +9,7 @@
 export default {
   data() {
     return {
-      status: 0 // 0: auto 1: dark 2: light
+      status: 1 // 0: auto 1: dark 2: light
     }
   },
   computed: {
@@ -29,7 +29,7 @@ export default {
       } else if (this.status === 1) {
         this.setMode(2);
       } else if (this.status === 2) {
-        this.setMode(0);
+        this.setMode(1);
       }
       window.localStorage.setItem('mode', this.status);
     },
@@ -54,7 +54,7 @@ export default {
 .theme-mode-setting
   overflow hidden
   border-radius 50%
-  display flex 
+  display flex
   align-items center
   justify-content center
   .theme-icon

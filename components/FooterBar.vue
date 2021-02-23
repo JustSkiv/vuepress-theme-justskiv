@@ -15,7 +15,7 @@
       <span class="">Powered by <a href="https://vuepress.vuejs.org" target="_blank"
           rel="external nofollow noopener">VuePress</a></span>
       <span class="φde"> Theme - <a href="https://github.com/80maker/vuepress-theme-maker" target="_blank"
-          rel="external nofollow noopener">Maker</a></span>
+          rel="external nofollow noopener">JustSkiv</a></span>
     </p>
   </div>
 </template>

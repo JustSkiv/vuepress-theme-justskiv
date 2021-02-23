@@ -57,6 +57,7 @@ export default {
       height: 0;
 }
 .theme-header
+  min-width: 90%;
   margin: 1rem 1rem 1em;
   border-radius: 6px;
   text-align: center;

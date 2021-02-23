@@ -7,12 +7,12 @@
       itemtype="http://schema.org/Person"
       itemscope
     >
-      <i class="icon-author"></i> 
+      <i class="icon-author"></i>
       <span itemprop="name">{{ author }}</span>
       <span v-if="location" itemprop="address"> &nbsp; in {{ location }}</span>
     </div>
     <div v-if="date" class="post-meta__date">
-      <i class="icon-calendar"></i> 
+      <i class="icon-calendar"></i>
       <time pubdate itemprop="datePublished" :datetime="date">
         {{ resolvedDate }}
       </time>
@@ -23,7 +23,7 @@
         {{ item.name}}
       </router-link>
     </div>
-    <div class="post-meta__reading">
+    <div v-if="$page.wordCount" class="post-meta__reading">
       <i class="icon-time"></i>
       {{$page.wordCount}} words in {{$page.readingTime}} min
     </div>
@@ -65,7 +65,7 @@ export default {
       let res = [];
       let cates;
       if (!Array.isArray(this.cates)) {
-        cates = [this.cates]; 
+        cates = [this.cates];
       }
       res = this.$category.list.filter(item => {
         return this.cates.includes(item.name);

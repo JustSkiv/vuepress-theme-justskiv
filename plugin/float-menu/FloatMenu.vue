@@ -7,7 +7,7 @@
       <span class="icon-sidebar" @click="handleToggleSideBar" v-if="width < mobileWidth"></span>
       <span class="icon-toc" v-if="$page.pid === 'post'" @click="toggleToc"></span>
       <span class="icon-search" @click.stop="toggleSearch"></span>
-      
+
     </div>
     <div class="float-menu" @click="toggleMenu">
       <svg
@@ -24,8 +24,8 @@
           cx="50%"
           cy="50%"/>
       </svg>
-      <div class="float-menu__dot"  v-if="count === 0"></div>
-      <div class="float-menu__text" v-else>{{count}}<span>%</span></div>
+      <div class="float-menu__dot"></div>
+      <div class="float-menu__text" v-if="false">{{count}}<span>%</span></div>
     </div>
   </div>
 </template>
@@ -41,7 +41,7 @@ export default {
   },
   data() {
     return {
-      isSHow: false,
+      isSHow: true,
       scrollTop: 0,
       count: 0,
       mobileWidth: 0,
@@ -107,29 +107,22 @@ export default {
     .float-menu__dot
       transform rotate(-90deg)
     .float-menu__list > span
-      opacity: 1;
+      opacity: 0.5;
       z-index 0
       &.icon-search
         z-index -1
-      &:nth-child(3n-2)
-        top: 0;
-        right: 0;
-      &:nth-child(3n)
-        bottom: 0;
-        left: 0;
-      &:nth-child(3n-1)
-        top: 0;
-        left: 0;
+      &:nth-child(n)
+        right: 10%;
       &:first-child
-        transform: translate3d(0,-140%,0);
+        transform: translate3d(0,-380%,0); // up btn
       &:nth-child(2)
-        transform: translate3d(-98.99495%,-98.99495%,0);
+        transform: translate3d(0,-260%,0); // theme btn
       &:nth-child(3)
-        transform: translate3d(-140%,0,0);
+        transform: translate3d(0,-140%,0); // content btn
       &:nth-child(4)
-        transform: translate3d(0,-280%,0);
+        transform: translate3d(0,-500%,0); // search btn
       &:nth-child(5)
-        transform: translate3d(-107.15136%,-258.68627%,0);
+        transform: translate3d(0,-400%,0);
 .float-menu
   position relative
   -webkit-tap-highlight-color rgba(0,0,0,0)

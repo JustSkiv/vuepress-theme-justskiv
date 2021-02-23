@@ -1,6 +1,6 @@
-// 使用异步函数也是可以的
+// It is also possible to use asynchronous functions
 export default ({
-  Vue, // VuePress 正在使用的 Vue 构造函数
+  Vue, // VuePress Vue constructor in use
   options, // 附加到根实例的一些选项
   router, // 当前应用的路由实例
   siteData, // 站点元数据

@@ -24,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/JustSkiv/vuepress-theme-justskiv/issues"
   },
-  "homepage": "https://tuzov.su/",
+  "homepage": "https://github.com/JustSkiv/vuepress-theme-justskiv/",
   "dependencies": {
     "@vuepress/plugin-blog": "^1.9.3",
     "@vuepress/plugin-medium-zoom": "^1.8.0",
