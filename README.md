@@ -4,7 +4,7 @@ A flat and clean Blog Theme for VuePress site. inspired by [Hexo-theme-inside](h
 
 ## Preview
 
-![预览](https://raw.githubusercontent.com/80maker/vuepress-theme-maker/main/blog/.vuepress/public/images/screenshot.webp)
+WIP
 
 ## Features
 
