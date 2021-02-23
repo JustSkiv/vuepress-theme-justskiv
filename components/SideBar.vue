@@ -70,9 +70,6 @@ export default {
     padding: 2px;
     width: 8rem;
     height: 8rem;
-    border: 1px solid;
-    border-radius: 50%;
-    border-color rgba(96,125,139,.4)
     vertical-align: bottom;
     box-sizing content-box
   &__name

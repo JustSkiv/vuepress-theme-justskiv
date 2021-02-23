@@ -32,19 +32,6 @@
       </header>
       <div class="article-con">
         <Content class="article-content" itemprop="articleBody" />
-        <div class="article-copyright">
-          <ul>
-            <li class="article-copyright__item">
-              <strong class="article-copyright__title">Last-updated<span>:</span></strong>
-              <p class="article-copyright__text">{{$page.lastUpdated}}</p>
-            </li>
-            <li class="article-copyright__item">
-              <strong class="article-copyright__title">Link<span>:</span></strong>
-              <p class="article-copyright__text"><a :href="pageLink"
-                  :title="$page.title">{{pageLink}}</a></p>
-            </li>
-          </ul>
-        </div>
         <Reward v-if="isShowReward"/>
       </div>
       <div class="article-footer">

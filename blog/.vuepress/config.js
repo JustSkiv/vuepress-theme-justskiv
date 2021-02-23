@@ -1,5 +1,5 @@
 module.exports = {
-  title: '1980\'s Maker',
+  title: "JustSkiv",
   description: 'Site description...',
   port: 8088,
   markdown: {
@@ -12,6 +12,7 @@ module.exports = {
       'markdown-it-task-lists': true
     }
   },
+
   theme: require.resolve('../../index'), // 使用本地主题
   themeConfig: require('./config/themeConfig'),
   plugins: require('./config/plugins')
