@@ -9,24 +9,23 @@ A flat and clean Blog Theme for VuePress site. inspired by [Hexo-theme-inside](h
 ## Features
 
 - Build with Vue.js
-- 在VuePress默认主题基础之上修改,保留了内置搜索,tag分类等绝大多数特性
-- 基于官方博客插件`@vuepress/plugin-blog`制作
-- 扩展了Markdown语法,支持`footnote` `mark` `abbr` `task-lists`, `Demo Code`
-- 支持文章评论
-- 文章打赏模块
-- 内置友情链接页
-- 文章阅读时长估算
-- rss订阅及sitemap
-- PWA支持
-- seo配置
-- 暗黑模式
-- 响应式主题
+- Modified on the basis of VuePress default theme, retaining the vast majority of features such as built-in search, tag classification and so on
+- Based on the official blog plugin '@vuepress/plugin-blog`
+- Dark mode
+- Extended Markdown syntax, support `footnote` `mark` `abbr` `task-lists`, `Demo Code`
+- Support article reviews
+- Built-in friend-links page
+- Estimation of article reading time
+- RSS feeds and sitemap
+- PWA support
+- SEO configuration
+- Responsive theme
 
 ## Install
 
 ```
 npm i vuepress-theme-maker -D
-# OR yarn add vuepress-theme-maker -D
+# yarn add vuepress-theme-maker -D
 ```
 
 ## Usage
@@ -43,7 +42,7 @@ module.exports = {
 
 ## Demo
 
-[80shuo.com](https://github.com/80maker/80shuo)
+WIP
 
 ## Deploy to Github Pages
 
@@ -55,6 +54,7 @@ npm run deploy
 - [VuePress](https://vuepress.vuejs.org/)
 - [@vuepress/plugin-blog](https://github.com/vuepress/vuepress-plugin-blog)
 - [@vuepress/theme-blog](https://github.com/vuepress/vuepress-theme-blog)
+- [@80maker/vuepress-theme-maker](https://github.com/80maker/vuepress-theme-maker)
 
 ### license
 [MIT](https://github.com/recoluan/vuepress-theme-reco/blob/master/LICENSE)
