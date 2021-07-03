@@ -89,6 +89,7 @@ export default {
     margin: 2rem 0 1rem;
     font-weight: 700;
 .article-content
+  opacity: .8;
   a
     border-bottom: 1px dotted;
     transition: color .15s,border-color .15s,opacity .15s;
@@ -96,6 +97,7 @@ export default {
   .post-title
     padding: 4.3rem 2.15rem 2.15rem;
     margin 0
+    line-height: 32px;
   .post-meta
     padding: 0px 2.15rem;
     line-height: 3;
@@ -117,7 +119,7 @@ export default {
   border-left: 3px solid var(--theme-accent-color);
   border-radius: 3px;
   word-break: break-word;
-  line-height: 1.8;
+  line-height: 24px;
   ul
     margin 0
     padding-left 0

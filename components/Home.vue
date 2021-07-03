@@ -62,9 +62,13 @@ export default {
     display: block;
     padding: 1.5rem 1.5rem 0;
     transition: color .15s;
+    font-size: 20px;
+    line-height: 24px;
 .article-desc
   padding: 0 1.5rem;
   opacity: .8;
+  line-height: 24px;
+  letter-spacing: 0.2px;
   a
     border-bottom: 1px dotted;
     transition: color .15s,border-color .15s,opacity .15s;
