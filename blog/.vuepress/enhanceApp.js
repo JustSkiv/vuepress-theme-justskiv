@@ -1,10 +1,21 @@
 // It is also possible to use asynchronous functions
 export default ({
   Vue, // VuePress Vue constructor in use
-  options, // 附加到根实例的一些选项
-  router, // 当前应用的路由实例
-  siteData, // 站点元数据
-  isServer // 当前应用配置是处于 服务端渲染 或 客户端
+  options, // Some options for attaching to the root instance
+  router, // route instance of the current application
+  siteData, // Site Metadata
+  isServer // The current application configuration is in SSR or client-side rendering
 }) => {
-  // ...做一些其他的应用级别的优化
+  router.beforeEach((to, from, next) => {
+    // Solve routing of non-ASCII file names, prevent 404
+    const decodedPath = decodeURIComponent(to.path)
+    if (decodedPath !== to.path && !to.path.includes('/post/')) {
+      next(Object.assign({}, to, {
+        fullPath: decodeURIComponent(to.fullPath),
+        path: decodedPath
+      }))
+    } else {
+      next()
+    }
+  })
 }

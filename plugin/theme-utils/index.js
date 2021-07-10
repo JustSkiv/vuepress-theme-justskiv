@@ -29,7 +29,7 @@ module.exports = (options = {}, context) => ({
       return $page.pageType = 'categoryItem';
     } else if ($page.path === '/tags/') {
       return $page.pageType = 'tag';
-    } else if (/^\/tags\/\w/.test($page.path)) {
+    } else if (/^\/tags\/.+/.test($page.path)) {
       return $page.pageType = 'tagItem';
     } else if ($page.path === '/') {
       return $page.pageType = 'home';
