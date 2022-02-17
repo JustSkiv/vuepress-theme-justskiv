@@ -1,7 +1,6 @@
 <template>
   <span class="theme-mode-setting" @click="handleToggleMode" :title="title">
-    <Icon icon="auto" v-if="status === 0" :key="status"/>
-    <Icon icon="moon" v-else-if="status === 1" :key="status" />
+    <Icon icon="moon" v-if="status === 1" :key="status" />
     <Icon icon="sun" v-else :key="status"/>
   </span>
 </template>
@@ -9,7 +8,7 @@
 export default {
   data() {
     return {
-      status: 1 // 0: auto 1: dark 2: light
+      status: 1 // 0: auto, 1: dark, 2: light
     }
   },
   computed: {
@@ -20,13 +19,17 @@ export default {
   },
   mounted() {
     let status = +window.localStorage.getItem('mode');
-    this.setMode(status);
+
+    if (status !== 0) {
+      this.setMode(status);
+    }
   },
   methods: {
     handleToggleMode() {
-      if (this.status === 0) {
-        this.setMode(1);
-      } else if (this.status === 1) {
+      // if (this.status === 0) {
+      //   this.setMode(1);
+      // } else
+      if (this.status === 1) {
         this.setMode(2);
       } else if (this.status === 2) {
         this.setMode(1);
