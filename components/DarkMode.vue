@@ -30,8 +30,10 @@ export default {
       //   this.setMode(1);
       // } else
       if (this.status === 1) {
+        this.$eventBus.$emit('EV_SET_LIGHT_MODE')
         this.setMode(2);
       } else if (this.status === 2) {
+        this.$eventBus.$emit('EV_SET_DARK_MODE')
         this.setMode(1);
       }
       window.localStorage.setItem('mode', this.status);
