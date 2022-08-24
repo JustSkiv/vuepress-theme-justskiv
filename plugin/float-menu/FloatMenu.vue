@@ -2,9 +2,9 @@
   <div class="float-menu-wrap" :class="{'float-menu-wrap--open': isSHow}">
     <Toc/>
     <div class="float-menu__list">
-      <span class="icon-up" @click="scrollToTop"></span>
+      <span class="icon-up" @click="scrollToTop" v-if="!isMobile"></span>
       <DarkMode/>
-      <span class="icon-sidebar" @click="handleToggleSideBar" v-if="width < mobileWidth"></span>
+      <span class="icon-sidebar" @click="handleToggleSideBar" v-if="isMobile"></span>
       <span class="icon-toc" v-if="$page.pid === 'post'" @click="toggleToc"></span>
       <span class="icon-search" @click.stop="toggleSearch"></span>
 
@@ -53,6 +53,9 @@ export default {
       const circumference = 48 * 2 * Math.PI;
       const offset = this.count / 100 * circumference;
       return `${offset}% ${circumference}%`
+    },
+    isMobile() {
+      return this.width < this.mobileWidth;
     }
   },
   mounted() {
@@ -68,6 +71,8 @@ export default {
       this.scrollTop = this.getScrollTop()
       this.count = Math.floor(this.scrollTop / (nScrollHeight - nClientHeight) * 100);
     });
+
+    this.isSHow = !this.isMobile
   },
   methods: {
      getScrollTop () {
